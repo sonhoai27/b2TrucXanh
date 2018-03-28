@@ -78,7 +78,11 @@ public class Board {
         //tạo mảng 2 chiều có trùng. do có 16 phần từ, mà mỗi
         //phần tử trùng 1 nên còn 8, vì vậy cái nào lớn hơn 7 thì - 8 đi
         for(int i = 0; i < row*col;i++){
-            board[i/4][i%4] = mang[i] > 7 ? mang[i] - 8 : mang[i];
+            if( mang[i] > 7){
+                board[i/4][i%4] = mang[i] - 8;
+            }else {
+                board[i/4][i%4] = mang[i];
+            }
         }
         return board;
     }
