@@ -118,6 +118,7 @@ public class Board {
     }
 
 
+    //lấy ra 1 bitmap con theo tọa độ x;
     private Bitmap createBitmap(int x){
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.output);
         int numImg = rowQty*colQty/2;
@@ -126,6 +127,7 @@ public class Board {
         Bitmap temp = Bitmap.createBitmap(bitmap,x,0, width,height);
         return temp;
     }
+    //lưu lại các tọa độ x theo kích thước hình, số lượng hình
     private void makeSource(){
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.output);
         int numImg = rowQty*colQty/2;
