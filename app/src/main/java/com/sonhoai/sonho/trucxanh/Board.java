@@ -104,12 +104,12 @@ public class Board {
         Log.i("DOO", String.valueOf(board[colIndex][rowIndex]));
         onDrawBoard(colIndex,rowIndex,cellWidth,cellHeight);
         view.invalidate();
+        checkWin(colIndex,rowIndex);
         return true;
     }
 
     private void onDrawBoard(int colIndex, int rowIndex, int cellWidth, int cellHeight){
         int padding = 0;
-        checkWin(colIndex,rowIndex);
         canvas.drawBitmap(
                 createBitmap(source.get(board[colIndex][rowIndex])),
             new Rect(0,0,createBitmap(source.get(board[colIndex][rowIndex])).getWidth(), createBitmap(source.get(board[colIndex][rowIndex])).getHeight()),
@@ -138,6 +138,7 @@ public class Board {
         }
     }
     private void checkWin(int col, int row){
+        System.out.println(temp);
         if(temp == 0){
             temp = board[col][row];
         }else if(temp != 0){
