@@ -138,17 +138,17 @@ public class Board {
         }
     }
     private void checkWin(int col, int row){
-        System.out.println(temp);
-        if(temp == 0){
-            temp = board[col][row];
-        }else if(temp != 0){
-            if(temp == board[col][row]){
-                Log.i("THONG_BAO", "THANG");
-                temp = 0;
-            }else {
-                Log.i("THONG_BAO", "SAI");
-                temp = 0;
-            }
-        }
+//        System.out.println(temp);
+//        if(temp == 0){
+//            temp = board[col][row];
+//        }else if(temp != 0){
+//            if(temp == board[col][row]){
+//                Log.i("THONG_BAO", "THANG");
+//                temp = 0;
+//            }else {
+//                Log.i("THONG_BAO", "SAI");
+//                temp = 0;
+//            }
+//        }
     }
 }
